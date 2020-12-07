@@ -1,6 +1,6 @@
 var tmi = require("tmi.js")
 var channel = "dombnexen"
-var prefix = "!eg"
+var prefix = "!"
 
 var config = {
     options: {
