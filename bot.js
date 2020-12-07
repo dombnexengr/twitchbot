@@ -1,5 +1,5 @@
 var tmi = require("tmi.js")
-var channel = "dombnexen"
+var channelName = "dombnexen"
 var prefix = "!"
 
 var config = {
@@ -15,14 +15,14 @@ var config = {
         // get yours at http://twitchapps.com/tmi
         password: "oauth:drcpv4njerm9wrv48j04590pztvel3" //client.login(process.env.password);//password secret for twitch
     },
-    channels: [channel]
+    channels: [channelName]
 }
 
 var client = new tmi.client(config)
 client.connect();
 
 client.on("connected", (address, port) => {
-    client.action(channel, "The bot has connected!")
+    client.action(channelName, "The bot has connected!")
 })
 
 
@@ -30,8 +30,8 @@ client.on("connected", (address, port) => {
 
 client.on("chat", (channel, user, message, self) => {
     if (self) return;
-    if (message == "!discord") {
-        client.say(channel, "Join Us On our Discord https://discord.gg/mM7cUja")
+    if (message == "hello") {
+        client.say(channelName, "Hello Enigmas")
     }
     
     
