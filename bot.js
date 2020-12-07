@@ -30,9 +30,10 @@ client.on("connected", (address, port) => {
 
 client.on("chat", (channel, user, message, self) => {
     if (self) return;
-    if (message == "hi") {
-        client.say(channel, "hey pal.")
+    if (message == "!discord") {
+        client.say(channel, "Join Us On our Discord https://discord.gg/mM7cUja")
     }
+    
     
     //command handler code
     const args = message.slice(prefix.length).trim().split(/ +/g);
