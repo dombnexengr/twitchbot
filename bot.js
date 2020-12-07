@@ -43,29 +43,8 @@ client.on("chat", (channel, user, message, self) => {
     
 client.on("chat", (channel, user, message, self) => {
     if (self) return;
-    if (message == "!uptime") {
-        client.say(channelName, "My stream has been live for {uptime}.")
-    }
-})
-    
-client.on("chat", (channel, user, message, self) => {
-    if (self) return;
-    if (message == "!followage") {
-        client.say(channelName, "{touser.name} has been following {channel.name} for {touser.followage}.")
-    }
-})
-    
-client.on("chat", (channel, user, message, self) => {
-    if (self) return;
-    if (message == "!timezone") {
-        client.say(channelName, "It is now $(date) $(time)")
-    }
-})
-    
-client.on("chat", (channel, user, message, self) => {
-    if (self) return;
     if (message == "!lurk") {
-        client.say(channelName, "$(touser) thank you for the lurk! Enjoy your stay!")
+        client.say(channelName, '@$(user.username) thank you for the lurk! Enjoy your stay!")
     }
 })
     
@@ -73,12 +52,5 @@ client.on("chat", (channel, user, message, self) => {
     if (self) return;
     if (message == "!donate") {
         client.say(channelName, "If you realy want to donate me, i appreciate it so much it will help me alot to continue do my best and evolve my stream, the donation link is https://streamlabs.com/dombnexen")
-    }
-})
-    
-client.on("chat", (channel, user, message, self) => {
-    if (self) return;
-    if (message == "!so") {
-        client.say(channelName, "Check out {target.name} over at {target.url} , they are playing {target.game}!	")
     }
 })
