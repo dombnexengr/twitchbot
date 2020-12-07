@@ -75,16 +75,4 @@ client.on("chat", (channel, user, message, self) => {
     if (message == "!so") {
         client.say(channelName, "Check out {target.name} over at {target.url} , they are playing {target.game}!	")
     }
-    
-    
-    //command handler code
-    const args = message.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
-    try {
-        let commandFile = require(`./commands/${cmd}.js`)
-        commandFile.run(client, message, args, user, channel, self) 
-    } catch (err) {
-        //client.say(channelName, "Command Doesnt Exist.")
-        return;
-    }
 })
