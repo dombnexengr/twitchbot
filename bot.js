@@ -67,12 +67,12 @@ client.on('chat', (channel, userstate, message, self) => {
       if (loopInterval) { // Check if set
         console.log('stop $loop')
         clearInterval(loopInterval) // delete Timer
-        loopInterval = false
+        loopInterval = true
       } else {
         console.log('start $loop')
         loopInterval = setInterval(function () {
           client.say(channel, 'Test message') // client.say(channel, msg[1]) // ?
-        }, 30000) // 60000ms = 60s = 1min
+        }, 10000) // 60000ms = 60s = 1min
       }
 
     }
