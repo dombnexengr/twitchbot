@@ -56,18 +56,9 @@ client.on("chat", (channel, user, message, self) => {
 })
 
 //timer
-  const TwitchJS = require('twitch-js')
-  
-    const client = new TwitchJS.client({
-    channels: ['channelName'],
-    identity: {
-      username: 'dombnexen',
-      password: 'auth:9x0elqi1bt56bz7kdf14wb3dv01aup'
-    }
-  })
     
   let loopInterval
-  client.on('chat', (channel, userstate, message, self) => {
+client.on('chat', (channel, userstate, message, self) => {
     console.log(`Message "${message}" received from ${userstate['display-name']}`)
     if (self) return
     const msg = message.split(' ')
