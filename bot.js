@@ -44,7 +44,7 @@ client.on("chat", (channel, user, message, self) => {
 client.on("chat", (channel, user, message, self) => {
     if (self) return;
     if (message == "!lurk") {
-        client.say(channelName, "@$(user.username) thank you for the lurk! Enjoy your stay!")
+        client.say(channelName, "Thank you for the lurk! Enjoy your stay!")
     }
 })
     
