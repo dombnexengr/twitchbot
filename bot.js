@@ -32,4 +32,6 @@ client.on("chat", (channel, user, message, self) => {
     if (message == "hi") {
         client.say(channel, "hey pal.")
     }
+    
+    //command handler code
 })
