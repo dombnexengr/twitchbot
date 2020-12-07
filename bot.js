@@ -73,4 +73,5 @@ client.on("chat", (channel, user, message, self) => {
     if (self) return;
     if (message == "!so") {
         client.say(channelName, "Check out {target.name} over at {target.url} , they are playing {target.game}!	")
+    }
 };
