@@ -57,7 +57,7 @@ client.on("chat", (channel, user, message, self) => {
 
 //timer
     
-  let loopInterval
+let loopInterval
 client.on('chat', (channel, userstate, message, self) => {
     console.log(`Message "${message}" received from ${userstate['display-name']}`)
     if (self) return;
@@ -67,12 +67,12 @@ client.on('chat', (channel, userstate, message, self) => {
       if (loopInterval) { // Check if set
         console.log('stop $loop')
         clearInterval(loopInterval) // delete Timer
-        loopInterval = true
+        loopInterval = false
       } else {
         console.log('start $loop')
         loopInterval = setInterval(function () {
           client.say(channel, 'Test message') // client.say(channel, msg[1]) // ?
-        }, 10000) // 60000ms = 60s = 1min
+        }, 1000) // 60000ms = 60s = 1min
       }
 
     }
