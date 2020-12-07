@@ -35,7 +35,7 @@ client.on("chat", (channel, user, message, self) => {
     }
     
     //command handler code
-        const args = message.slice(prefix.length).trim().split(/ +/g);
+    const args = message.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
     try {
         let commandFile = require(`./commands/${cmd}.js`)
