@@ -54,3 +54,25 @@ client.on("chat", (channel, user, message, self) => {
         client.say(channelName, "If you realy want to donate me, i appreciate it so much it will help me alot to continue do my best and evolve my stream, the donation link is https://streamlabs.com/dombnexen")
     }
 })
+
+//timer
+  let loopInterval
+  client.on('chat', (channel, userstate, message, self) => {
+    console.log(`Message "${message}" received from ${userstate['display-name']}`)
+    if (self) return
+    const msg = message.split(' ')
+    if (msg[0].toLowerCase() === '$loop') {
+
+      if (loopInterval) { // Check if set
+        console.log('stop $loop')
+        clearInterval(loopInterval) // delete Timer
+        loopInterval = false
+      } else {
+        console.log('start $loop')
+        loopInterval = setInterval(function () {
+          client.say(channel, 'Test message') // client.say(channel, msg[1]) // ?
+        }, 30000) // 60000ms = 60s = 1min
+      }
+
+    }
+  })
