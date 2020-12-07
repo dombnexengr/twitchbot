@@ -56,6 +56,7 @@ client.on("chat", (channel, user, message, self) => {
 })
 
 //timer
+  const TwitchJS = require('twitch-js')
   let loopInterval
   client.on('chat', (channel, userstate, message, self) => {
     console.log(`Message "${message}" received from ${userstate['display-name']}`)
