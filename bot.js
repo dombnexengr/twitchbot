@@ -12,7 +12,7 @@ var config = {
     identity: {
         username: "dombnexen",
         // get yours at http://twitchapps.com/tmi
-        password: "oauth:drcpv4njerm9wrv48j04590pztvel3" //client.login(process.env.password);//password secret for twitch
+        password: "oauth:9x0elqi1bt56bz7kdf14wb3dv01aup" //client.login(process.env.password);//password secret for twitch
     },
     channels: [channelName]
 }
