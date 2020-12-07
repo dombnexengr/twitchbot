@@ -60,7 +60,7 @@ client.on("chat", (channel, user, message, self) => {
   let loopInterval
 client.on('chat', (channel, userstate, message, self) => {
     console.log(`Message "${message}" received from ${userstate['display-name']}`)
-    if (self) return
+    if (self) return;
     const msg = message.split(' ')
     if (msg[0].toLowerCase() === '$loop') {
 
