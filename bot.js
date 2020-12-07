@@ -24,6 +24,9 @@ client.on("connected", (address, port) => {
     client.action(channel, "The bot has connected!")
 })
 
+
+//chat responses
+
 client.on("chat", (channel, user, message, self) => {
     if (self) return;
     if (message == "hi") {
