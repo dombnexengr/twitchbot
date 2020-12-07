@@ -21,7 +21,7 @@ var config = {
 var client = new tmi.client(config)
 client.connect();
 
-client.on("connected") => {
+client.on("connected", (address, port) => {
     client.action(channel, "The bot has connected!")
 })
 
