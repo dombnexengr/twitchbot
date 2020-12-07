@@ -41,6 +41,7 @@ client.on("chat", (channel, user, message, self) => {
         let commandFile = require(`./commands/${cmd}.js`)
         commandFile.run(client, message, args, user, channel, self) 
     } catch (err) {
+        client.say(channelName, "Command Doesnt Exist.")
         return;
     }
 })
