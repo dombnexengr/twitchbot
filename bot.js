@@ -15,7 +15,7 @@ var config = {
         password: "oauth:drcpv4njerm9wrv48j04590pztvel3" //client.login(process.env.password);//password secret for twitch
 
     },
-    channels: ["dombnexen",]
+    channels: [channel]
 }
 
 var client = new tmi.client(config)
