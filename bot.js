@@ -47,10 +47,3 @@ client.on("chat", (channel, user, message, self) => {
         client.say(channelName, "Thank you for the lurk! Enjoy your stay!")
     }
 })
-    
-client.on("chat", (channel, user, message, self) => {
-    if (self) return;
-    if (message == "!donate") {
-        client.say(channelName, "If you realy want to donate me, i appreciate it so much it will help me alot to continue do my best and evolve my stream, the donation link is https://streamlabs.com/dombnexen")
-    }
-})
